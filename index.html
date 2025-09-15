@@ -4,63 +4,85 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>YUSUF Server</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f0f0f0;
+      font-family: 'Poppins', sans-serif;
+      background: #f5f7fa;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+      color: #333;
     }
 
     .container {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      width: 320px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      background: #fff;
+      width: 360px;
+      padding: 30px 25px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
       text-align: center;
     }
 
-    h1 {
-      margin-bottom: 5px;
-      font-size: 24px;
-      color: #222;
+    .title {
+      font-weight: 600;
+      font-size: 28px;
+      margin-bottom: 8px;
+      color: #2c3e50;
+      letter-spacing: 1.5px;
     }
 
-    p.subtitle {
-      margin-top: 0;
-      margin-bottom: 15px;
-      color: #555;
-      font-weight: 500;
+    .subtitle {
+      font-weight: 400;
+      font-size: 16px;
+      color: #7f8c8d;
+      margin-bottom: 25px;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
     }
 
     .menu a {
-      display: block;
-      padding: 10px 0;
-      margin: 8px 0;
-      background: #ddd;
-      border-radius: 6px;
-      color: #333;
+      background: #3498db;
+      color: white;
       text-decoration: none;
       font-weight: 600;
+      padding: 14px 0;
+      border-radius: 12px;
       font-size: 16px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
       user-select: none;
     }
 
     .menu a:hover {
-      background: #bbb;
+      background: #2980b9;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(41, 128, 185, 0.4);
+    }
+
+    @media (max-width: 400px) {
+      .container {
+        width: 90%;
+        padding: 20px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>YUSUF SERVER</h1>
+    <h1 class="title">YUSUF SERVER</h1>
     <p class="subtitle">HII GUYZZS! WELCOME TO SERVER 🌟 👋</p>
 
-    <div class="menu">
+    <nav class="menu">
       <a href="timetable.jpg" download>📘 Time Table</a>
       <a href="DBMS 1.pdf" download>💾 DBMS</a>
       <a href="#" download>📟 ADLD</a>
@@ -68,7 +90,7 @@
       <a href="ADLD LAB.pdf" download>📂 ADLD LAB</a>
       <a href="SAC LAB.docx" download>📂 SAC LAB</a>
       <a href="SQL.pdf" download>📂 SQL LAB</a>
-    </div>
+    </nav>
   </div>
 </body>
 </html>
