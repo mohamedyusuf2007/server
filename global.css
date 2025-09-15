@@ -1,43 +1,150 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="utf-8" />
-    <title>YUSUF Server - AI Interface</title>
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <main class="iphone">
-      <section class="div">
-        <header>
-          <h1 class="text-wrapper">YUSUF SERVER</h1>
-          <h2 class="text-wrapper-2">Hello Welcome</h2>
-        </header>
-        <nav class="overlap-group" role="navigation" aria-label="AI options row 1">
-          <button class="rectangle" aria-label="AI option 1">
-            <span class="text-wrapper-3">AI</span>
-          </button>
-          <button class="rectangle-2" aria-label="AI option 2">
-            <span class="text-wrapper-4">AI</span>
-          </button>
-        </nav>
-        <nav class="overlap" role="navigation" aria-label="AI options row 2">
-          <button class="rectangle" aria-label="AI option 3">
-            <span class="text-wrapper-3">AI</span>
-          </button>
-          <button class="rectangle-3" aria-label="AI option 4">
-            <span class="text-wrapper-5">AI</span>
-          </button>
-        </nav>
-        <section class="div-wrapper">
-          <button class="ai-button" aria-label="Main AI option">
-            <span class="text-wrapper-6">AI</span>
-          </button>
-        </section>
-      </section>
-    </main>
-  </body>
-</html>
+/* globals.css */
+/* Reset and global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #121212;
+  color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 
+/* style.css */
+.iphone {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  width: 375px;
+  height: 667px;
+  border-radius: 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.text-wrapper {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 2px 5px rgba(255, 255, 255, 0.15);
+}
+
+.text-wrapper-2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #a0c0ff;
+  margin-top: 5px;
+  letter-spacing: 1.2px;
+}
+
+/* Navigation rows */
+.overlap-group,
+.overlap {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Buttons styles */
+.rectangle,
+.rectangle-2,
+.rectangle-3,
+.ai-button {
+  flex: 1;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: none;
+  border-radius: 15px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding: 15px 0;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(118, 75, 162, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rectangle-2 {
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+  box-shadow: 0 4px 10px rgba(24, 90, 157, 0.5);
+}
+
+.rectangle-3 {
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  box-shadow: 0 4px 10px rgba(238, 9, 121, 0.5);
+}
+
+.ai-button {
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  font-size: 1.5rem;
+  box-shadow: 0 6px 15px rgba(221, 36, 118, 0.6);
+  border-radius: 25px;
+  width: 100%;
+}
+
+.rectangle:hover,
+.rectangle-2:hover,
+.rectangle-3:hover,
+.ai-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.7);
+}
+
+.text-wrapper-3,
+.text-wrapper-4,
+.text-wrapper-5,
+.text-wrapper-6 {
+  user-select: none;
+}
+
+/* Responsive tweaks for smaller screens */
+@media (max-width: 400px) {
+  .iphone {
+    width: 90vw;
+    height: auto;
+    padding: 15px 20px;
+  }
+
+  .text-wrapper {
+    font-size: 2rem;
+  }
+
+  .text-wrapper-2 {
+    font-size: 1rem;
+  }
+
+  .rectangle,
+  .rectangle-2,
+  .rectangle-3,
+  .ai-button {
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+
+  .ai-button {
+    font-size: 1.25rem;
+  }
+}
